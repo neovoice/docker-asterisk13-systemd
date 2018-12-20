@@ -5,9 +5,9 @@ It runs /var on external volume an links /etc/asterisk to /var/lib/asterisk/astc
 
 ### Pull the image:
 
-**docker pull etates/asterisk13-systemd**
+**docker pull etates/asterisk13-systemd:latest**
 
 
 ### Run the docker:
 
-**docker run -d --name asterisk13 -h ast13.your.domain -v /sys/fs/cgroup:/sys/fs/cgroup:ro --tmpfs /run -v ast13vol:/var -v /etc/localtime:/etc/localtime:ro etates/asterisk13-systemd:latest**
+**docker run -d --name asterisk13 -v /sys/fs/cgroup:/sys/fs/cgroup:ro --tmpfs /run -v ast13vol:/var -v /etc/localtime:/etc/localtime:ro etates/asterisk13-systemd:latest**
